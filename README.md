@@ -15,14 +15,14 @@ Default operation is to list the devices recognized by `bfgminer`.
 I.e. default options are `-d? -D`. Thus running
 
 ```
-docker run --device=/dev/<device> --it --rm peron/bfgminer
+docker run --device=/dev/<device> -it --rm peron/bfgminer
 ```
 
 will output a list of the reognized (SHA-) devices, and the container will then shut down and remove itself.
 If the devices are scrypt-devices, the container must be started with the correct parameters:
 
 ```
-docker run --device=/dev/<device> --it --rm peron/bfgminer --scrypt -d? -D
+docker run --device=/dev/<device> -it --rm peron/bfgminer --scrypt -d? -D
 ```
 
 Multiple `--device=...` parameters are possible.
